@@ -199,6 +199,9 @@ def handle_translation(text, translation_queue):
                         translations = response_test.choices[0].message.content # 从 API 响应中提取翻译结果文本
                         print(f'{prompt}\n{translations}') # 打印提示词和翻译结果 (调试或日志记录用)
 
+                        if translations.startswith('\n') and not text.startswith('\n'): #当原文未有换行符，结果出现换行符
+                            translations = translations.lstrip('\n')    #清除结果中开头的换行符
+
                         if has_special_start and has_special_end: # 如果原始文本包含特殊字符标记，则将翻译结果用特殊字符标记包裹起来，保持格式一致
                             if not translations.startswith(special_char_start): # 检查翻译结果是否已以起始标记开头，若没有则添加
                                 translations = special_char_start + translations
