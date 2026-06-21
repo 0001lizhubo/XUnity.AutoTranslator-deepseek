@@ -1,0 +1,21 @@
+# 忽略 Python 的缓存目录
+__pycache__/
+*.py[cod]
+
+# 如果你使用 virtualenv，也可以忽略虚拟环境目录（例如 venv/）
+venv/
+.env/
+
+# 忽略 Jupyter Notebook 检查点（如果用到）
+.ipynb_checkpoints/
+
+# 忽略 macOS 生成的系统文件（可选）
+.DS_Store
+
+# 忽略生成的图片和表格数据
+*.jpg
+*.png
+*.csv
+
+# 忽略 json 配置文件
+*.json

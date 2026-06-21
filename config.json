@@ -1,0 +1,35 @@
+{
+  "api_keys": {
+    "tencent": {
+      "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "base_url": "https://api.lkeap.cloud.tencent.com/v1",
+      "model_type": "deepseek-v3-0324"
+    },
+    "ali": {
+      "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model_type": "deepseek-v3"
+    },
+    "deepseek": {
+      "api_key": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "base_url": "https://api.deepseek.com/v1",
+      "model_type": "deepseek-chat"
+    },
+    "llama": {
+      "api_key": "no-key",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "model_type": "main"
+    }
+  },
+  "model_params": {
+    "temperature": 0.3,
+    "max_tokens": 0,
+    "min_tokens": 30,
+    "max_auto_tokens": 500,
+    "token_limit_ratio": 2.0,
+    "top_p": 0.8
+  },
+  "api_priority": ["llama"],
+  "prompt_user": "翻译游戏英文UI文本为简体中文。键位名称保持原文（Space、Shift、Ctrl、Alt、Esc、F1-F12、Tab等）。忽略单个字母（A-Z）。保持格式标签不变。忽略无意义字符串（如测试文本、占位符、随机字母）。",
+  "dict_path": "./dictionary.json"
+}
